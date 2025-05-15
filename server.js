@@ -7,7 +7,8 @@ const PORT = process.env.PORT;
 
 app.use(
   cors({
-    origin: "*",
+    origin: process.env.FRONT_URL,
+    credentials: true,
   })
 );
 app.use(express.json());
